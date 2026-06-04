@@ -20,14 +20,14 @@ const ComplaintCard = ({ complaint }) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <Card sx={{ width: '100%', maxWidth: 345, height: '100%', display: 'flex', flexDirection: 'column' }}>
       {complaint.image && (
         <CardMedia
           component="img"
           height="200"
           image={complaint.image}
           alt={complaint.category}
-          sx={{ objectFit: 'cover' }}
+          sx={{ width: '100%', objectFit: 'cover' }}
         />
       )}
       <CardContent sx={{ flexGrow: 1 }}>

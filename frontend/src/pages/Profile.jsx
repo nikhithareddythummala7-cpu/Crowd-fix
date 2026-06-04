@@ -126,15 +126,16 @@ const Profile = () => {
               multiline
               rows={2}
             />
-            <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, mt: 3 }}>
               <Button
                 variant="contained"
                 type="submit"
                 disabled={loading}
+                sx={{ width: { xs: '100%', sm: 'auto' } }}
               >
                 {loading ? <CircularProgress size={24} /> : 'Save Changes'}
               </Button>
-              <Button variant="outlined">
+              <Button variant="outlined" sx={{ width: { xs: '100%', sm: 'auto' } }}>
                 Change Password
               </Button>
             </Box>
@@ -148,7 +149,7 @@ const Profile = () => {
           <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
             Account Details
           </Typography>
-          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2 }}>
             <Box>
               <Typography variant="body2" color="textSecondary">
                 Role

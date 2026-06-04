@@ -165,7 +165,7 @@ const ReportComplaint = () => {
               required
             />
 
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, mt: 2 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 1, mt: 2 }}>
               <TextField
                 label="Latitude"
                 name="latitude"

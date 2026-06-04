@@ -28,16 +28,16 @@ cp .env.example .env
 
 4. Update .env with API URL:
 ```
-REACT_APP_API_URL=http://localhost:5001/api
-REACT_APP_ENV=development
+VITE_API_URL=http://localhost:5001/api
+VITE_ENV=development
 ```
 
 5. Start the development server:
 ```bash
-npm start
+npm run dev
 ```
 
-The app will run on `http://localhost:3000`
+The app will run on `http://localhost:5173`
 
 ## Project Structure
 
@@ -71,14 +71,14 @@ src/
 
 ## Available Scripts
 
-### `npm start`
-Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
+### `npm run dev`
+Runs the app in development mode at [http://localhost:5173](http://localhost:5173)
 
-### `npm build`
-Builds the app for production to the build folder
+### `npm run build`
+Builds the app for production to the `dist` folder
 
-### `npm test`
-Launches the test runner in interactive watch mode
+### `npm run preview`
+Previews the production build locally
 
 ## Features
 

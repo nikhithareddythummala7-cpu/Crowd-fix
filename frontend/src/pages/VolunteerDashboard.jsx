@@ -104,7 +104,7 @@ const VolunteerDashboard = () => {
 
   const ComplaintItem = ({ complaint, isAssigned = false }) => (
     <Card sx={{ mb: 2, p: 2 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'start', gap: 2 }}>
         <Box sx={{ flex: 1 }}>
           <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
             {complaint.category}
@@ -135,7 +135,7 @@ const VolunteerDashboard = () => {
             {new Date(complaint.createdAt).toLocaleDateString()}
           </Typography>
         </Box>
-        <Box sx={{ textAlign: 'right' }}>
+        <Box sx={{ textAlign: { xs: 'left', md: 'right' }, display: 'flex', flexDirection: 'column', alignItems: { xs: 'flex-start', md: 'flex-end' } }}>
           <Typography
             variant="caption"
             sx={{
@@ -183,7 +183,7 @@ const VolunteerDashboard = () => {
         <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
           📍 Your Area
         </Typography>
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
           <TextField
             label="Area Name"
             value={area}
@@ -193,6 +193,7 @@ const VolunteerDashboard = () => {
           <Button
             variant="contained"
             onClick={handleUpdateArea}
+            sx={{ width: { xs: '100%', sm: 'auto' } }}
           >
             Update Area
           </Button>

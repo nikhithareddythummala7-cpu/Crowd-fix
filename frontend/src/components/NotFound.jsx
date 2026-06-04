@@ -17,7 +17,7 @@ const NotFound = () => {
           textAlign: 'center',
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: '100px', fontWeight: 'bold', color: '#1976d2' }}>
+        <Typography variant="h1" sx={{ fontSize: { xs: '64px', md: '100px' }, fontWeight: 'bold', color: '#1976d2' }}>
           404
         </Typography>
         <Typography variant="h4" sx={{ mb: 2 }}>
@@ -26,7 +26,7 @@ const NotFound = () => {
         <Typography variant="body1" color="textSecondary" sx={{ mb: 4 }}>
           The page you're looking for doesn't exist.
         </Typography>
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, width: '100%' }}>
           <Button
             variant="contained"
             onClick={() => navigate('/')}

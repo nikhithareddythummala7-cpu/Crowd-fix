@@ -37,18 +37,18 @@ const Home = () => {
         sx={{
           background: 'linear-gradient(135deg, #1976d2 0%, #115293 100%)',
           color: '#fff',
-          py: 10,
+          py: { xs: 8, md: 10 },
           textAlign: 'center',
         }}
       >
         <Container maxWidth="md">
-          <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2, fontSize: { xs: '2rem', sm: '2.75rem', md: '3.5rem' } }}>
             🔧 CrowdFix
           </Typography>
-          <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h5" sx={{ mb: 4, opacity: 0.9, fontSize: { xs: '1.1rem', sm: '1.4rem' } }}>
             Community Problem Reporting System
           </Typography>
-          <Typography variant="body1" sx={{ mb: 4, fontSize: 18 }}>
+          <Typography variant="body1" sx={{ mb: 4, fontSize: { xs: '1rem', md: 18 } }}>
             Report civic issues, track progress, and engage with your community to build a better tomorrow.
           </Typography>
           {!isAuthenticated ? (

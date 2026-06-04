@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box, CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -26,8 +27,9 @@ function App() {
   return (
     <Router>
       <AuthProvider>
+        <CssBaseline />
         <Navbar />
-        <main style={{ minHeight: 'calc(100vh - 64px)', backgroundColor: '#fafafa' }}>
+        <Box component="main" sx={{ minHeight: 'calc(100vh - 64px)', backgroundColor: '#fafafa', px: { xs: 2, md: 0 }, pt: { xs: 7, md: 8 } }}>
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
@@ -87,7 +89,7 @@ function App() {
             {/* 404 Not Found */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main>
+        </Box>
 
         {/* Toast Notifications */}
         <ToastContainer

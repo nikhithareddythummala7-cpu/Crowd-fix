@@ -152,8 +152,8 @@ const UserDashboard = () => {
             {complaints.slice(0, 6).map((complaint) => (
               <Grid item xs={12} md={6} key={complaint._id}>
                 <Card sx={{ p: 2 }}>
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
-                    <Box>
+                  <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'flex-start', md: 'start' }, gap: 2 }}>
+                    <Box sx={{ flex: 1 }}>
                       <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                         {complaint.category}
                       </Typography>

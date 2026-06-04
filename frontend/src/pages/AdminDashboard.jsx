@@ -349,8 +349,8 @@ const AdminDashboard = () => {
       {/* Complaints Tab */}
       {activeTab === 'complaints' && (
         <>
-          <TableContainer component={Paper}>
-            <Table>
+          <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
+            <Table sx={{ minWidth: 900 }}>
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
                   <TableCell><strong>Image</strong></TableCell>
@@ -460,8 +460,8 @@ const AdminDashboard = () => {
           <Typography variant="h6" sx={{ mb: 2 }}>
             🚴 Volunteer Activities
           </Typography>
-          <TableContainer component={Paper}>
-            <Table>
+          <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
+            <Table sx={{ minWidth: 700 }}>
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
                   <TableCell><strong>Volunteer</strong></TableCell>
@@ -517,8 +517,8 @@ const AdminDashboard = () => {
               </Select>
             </FormControl>
           </Box>
-          <TableContainer component={Paper}>
-            <Table>
+          <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
+            <Table sx={{ minWidth: 700 }}>
               <TableHead>
                 <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
                   <TableCell><strong>Name</strong></TableCell>
